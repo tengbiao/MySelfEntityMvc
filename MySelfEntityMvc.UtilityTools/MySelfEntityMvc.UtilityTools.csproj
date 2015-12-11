@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E3AA3F45-47EC-4DE9-922B-576BBC914705}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MySelfEntityMvc.UtilityTools</RootNamespace>
+    <AssemblyName>MySelfEntityMvc.UtilityTools</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\Debug\MySelfEntityMvc.UtilityTools.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\Release\MySelfEntityMvc.UtilityTools.xml</DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-client\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caching\MemoryCache.cs" />
+    <Compile Include="Caching\ApplicationCache.cs" />
+    <Compile Include="ConfigHelper.cs" />
+    <Compile Include="ConvertHelper.cs" />
+    <Compile Include="Data\BaseRepository.cs" />
+    <Compile Include="Data\ContextManager.cs" />
+    <Compile Include="Data\KeyValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\EFDbContext.cs" />
+    <Compile Include="Data\PredicateBuilder.cs" />
+    <Compile Include="Data\UnitOfWork.cs" />
+    <Compile Include="NOPIHelper.cs" />
+    <Compile Include="Reflection\ReflectionUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reflection\rft.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\XMLHelper.cs" />
+    <Compile Include="IO\FileEx.cs" />
+    <Compile Include="IO\filesys.cs" />
+    <Compile Include="IO\LinuxPath.cs" />
+    <Compile Include="IO\PathTool.cs" />
+    <Compile Include="IO\WindownsPath.cs" />
+    <Compile Include="IO\Base64.cs" />
+    <Compile Include="PathHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="Serialization\Jsonhelper.cs" />
+    <Compile Include="strUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UrlInfo.cs" />
+    <Compile Include="Encryptor.cs" />
+    <Compile Include="Web\AshxHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\CurrentRequest.cs" />
+    <Compile Include="System.cs" />
+    <Compile Include="Web\PostAndGet.cs" />
+    <Compile Include="Web\SystemInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\TemplateEngine.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <Compile Include="WechatMethod\Cryptography.cs" />
+    <Compile Include="WechatMethod\MP.cs" />
+    <Compile Include="WechatMethod\WeChatInfo.cs" />
+    <Compile Include="WechatMethod\WXBizMsgCrypt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WechatMethod\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MySelfEntityMvc.Models\MySelfEntityMvc.Models.csproj">
+      <Project>{9bd88734-4fde-44f2-95ed-d9341aa69e72}</Project>
+      <Name>MySelfEntityMvc.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

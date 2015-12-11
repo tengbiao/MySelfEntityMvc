@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+}
+@model List<MySelfEntityMvc.Models.TblProduct>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @foreach (var item in Model)
+        {
+            <p>@item.ProductName</p>
+        }
+    </div>
+</body>
+</html>

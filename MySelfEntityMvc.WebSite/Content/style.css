@@ -1,0 +1,758 @@
+@import url("reset.css");
+@import url("animate.css");
+@import url("fotter.css");
+
+body{
+	background:#000 url(/Content/Images/bodybg.png) repeat-x ;
+}
+
+/****可乐返回按钮****url(/Content/Images/bodybg.png) repeat-x/
+.kele:before{ position: absolute; content: " "; border: transparent 14px solid; border-width: 13px 8px ; border-right-color: #CCC; top: 1px; left: -16px; height: 0; width: 0; }
+.kele{ position: relative; width: 40px; height: 28px; background: #EEE; border-radius: 5px;  margin: 30px; text-align: center; line-height: 28px; color: #999; font-size: 14px; border: 1px solid #CCC; }
+.kele:after{ position: absolute; content: " "; border: transparent 13px solid;  border-width:  12px 8px; border-right-color: #EEE; top: 2px; left: -15px; height: 0; width: 0; }
+
+
+
+
+/**内容区**/
+#kelebody{ position: absolute;top: 50px;bottom: 40px;overflow: hidden;left: 0;right: 0;width: 100%;}
+.Language{ width: 100%;height: 30px;text-align: right;padding: 10px;}
+.Language a{ width: 50px;height: 25px;line-height: 25px;text-align: center;
+              margin-right: 15%;color: #ffffff;display:inline-block;border: 1px solid #ffffff;border-radius: 5px;}
+.scroller {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	width: 100%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+
+.bodycontent{
+	width:100%;
+	min-width:320px;
+	max-width: 480px;
+	margin: 0 auto;
+	color: #fff;
+}
+
+.btn-box{
+	padding-top:10px;
+	position:relative;
+	text-align:center
+	}
+.btn{
+	margin:0 auto;
+	font-size:16px;
+	color:#E0031B;
+	padding:6px 0;
+	width:80%;
+	border-radius:8px;
+	background: -webkit-gradient(linear,0% 0%, 0% 100%, from(#DFDFDF), to(#FFFFFF), color-stop(0.2,#EDEDED),color-stop(0.9,#DBDBDB),color-stop(0.4,#EDEDED))
+	}
+.en{ font-size:12px; line-height:20px;font-weight: lighter;}
+
+.btn-red{
+		color:#fff;
+		background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#A20214), to(#E31B1B), color-stop(0.2,#DB0B12),color-stop(0.9,#BA0316),color-stop(0.4,#E01010));
+	}
+
+/*市场走访*/
+.interview{width:80%;margin:5px auto;display: none}
+.interview .arrowinside{ left:29px; top:1px; z-index:3;border-top:13px solid #CACACA;border-left:13px solid transparent;border-right:13px solid transparent;}
+.interview .arrowoutside{ left:30px; z-index:4;border-top:12px solid #2D2D2D;border-left: 12px solid transparent;border-right: 12px solid transparent;}
+.interview ul{border:#CACACA 1px solid;}
+.interview ul li:first-child{
+	border-bottom:#CACACA 1px solid;
+	
+}
+.interview ul li:nth-child(2){
+	border-bottom:#CACACA 1px solid;
+}
+.interview .bar{background:#CACACA; position: absolute;;left: 50%;margin-left:-0.5px;width: 1px;height: 117px;top:1px;}
+.interview ul li{ width:50%;float: left;padding:12px 0;border-top:0; text-align:center; }
+.interview ul li a{ color:#fff; font-size:13px;text-align: left;width:100%;display: block;text-indent: 40px;}
+.interview ul li a[title="gt"]{background:url(/Content/Images/GUico.png) no-repeat;background-size:26px 20px;background-position:10px 3px;text-align:center}
+.interview ul li a[title="td"]{background:url(/Content/Images/TEDico.png) no-repeat;background-size:28px 21px;background-position:6px 3px;text-align:center}
+.interview ul li a[title="mh"]{background:url(/Content/Images/MEDico.png) no-repeat;background-size:28px 21px;background-position:6px 3px;text-align:center}
+.interview ul li a[title="hs"]{background:url(/Content/Images/HSico.png) no-repeat;background-size:28px 21px;background-position:6px 3px;text-align:center}
+.interview ul li a span.en{color:#fff;font-size:12px!important;text-align: left;text-indent: 40px;display: block;text-align:center}
+.interview ul li a.btn-red{ color:#E20A27 !important; display:block;text-align:center}
+.interview ul li a.btn-red span.en{color:#E20A27;font-size:12px !important;text-align:center}
+.interview ul li.btn-red{
+		color:#fff;
+		background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#A20214), to(#E31B1B), color-stop(0.2,#DB0B12),color-stop(0.9,#BA0316),color-stop(0.4,#E01010));
+	}
+
+/*报表*/
+.visit-report{ width:80%;margin:5px auto;display: none}
+.visit-report .arrowinside{ left:29px; top:1px; z-index:3;border-top:13px solid #CACACA;border-left:13px solid transparent;border-right:13px solid transparent;}
+.visit-report .arrowoutside{ left:30px; z-index:4;border-top:12px solid #1B1B1B;border-left: 12px solid transparent;border-right: 12px solid transparent;}
+.visit-report ul{width:100%;}
+.visit-report ul li:first-child{border-top:#CACACA 1px solid;}
+.visit-report ul li{ padding:6px 0; width:100%;border:#CACACA 1px solid;border-top:0; text-align:center; background:#131313 }
+.visit-report ul li a{ color:#fff;width:100%; font-size:13px;display: block}
+.visit-report ul li a span.en{color:#fff;font-size:12px!important;}
+.visit-report ul li a.btn-red{color:#E20A27}
+.visit-report ul li a.btn-red span.en{color:#E20A27;}
+.visit-report ul li.btn-red{
+		color:#fff;
+		background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#A20214), to(#E31B1B), color-stop(0.2,#DB0B12),color-stop(0.9,#BA0316),color-stop(0.4,#E01010));
+	}
+/*选择位置*/
+
+#interviewSelectPosition{
+
+	padding-top:20px;
+	width: 92%;
+	margin: 0 auto;
+	color: #fff;
+}
+.vPsition{
+
+	font-size: 16px;
+	color: #fff;
+	text-indent: 10px;
+
+}
+.vPsition .title span.en{
+	font-size: 12px;
+	text-indent: 10px;
+	display: block;
+}
+.vPsition .mark{
+	width: 30px;
+	height: 41px;
+	background: url(/Content/Images/mapmark.png);
+	background-size: cover;
+	display: inline-block;
+}
+.vPsition .title{
+
+	display: inline-block;
+	vertical-align:top;
+	line-height: 30px;
+
+}
+
+.vPsition .vpostion{
+	display: inline-block;
+	vertical-align:top;
+	padding-top:15px;
+	font-size: 18px;
+}
+/********城市选择样式***/
+#interviewSelectPosition ul li div.title{
+	display: table-cell;
+	width: 70px;
+    padding: 10px 0px 0px 10px;
+	font-size: 15px;
+}
+#interviewSelectPosition>ul>li{
+	margin-top: 20px
+}
+#interviewSelectPosition ul li div.title span.en{
+	text-indent: 0;
+	display: block;
+	line-height: 20px;
+	
+}
+.room{
+	display: table-cell;
+	vertical-align: bottom;
+}
+.room .input-select.btn{
+
+	background: #fff;
+	color: #9E9F9F;
+}
+.input-select
+{
+width: 220px;
+height: 24px;
+border-radius: 4px;
+cursor: pointer;
+position: relative;
+display: inline-block;
+text-align:left;
+}
+.input-select span {
+line-height: 24px;
+padding-left: 10px;
+float: left !important;
+font-size: 13px;
+z-index: 2;
+text-align: left !important;
+}
+.input-select .sel_arrow {
+position: absolute;
+right: 10px;
+top: 15px;
+width:0; 
+height:0; 
+border-left:8px solid transparent;
+border-right:8px solid transparent;
+border-top:8px solid #9E9F9F;
+}
+.listBox { width:220px;margin:5px 0; padding-top:2px; border: 1px solid #999; display:none; }
+.listBox .search{width:180px;margin:0 auto;}
+.listBox .search input{ width:180px; border-radius:15px ;margin:5px 0;text-indent: 10px;padding:5px 0; }
+.list-div{position: relative;width: 100%;height: 240px;overflow: hidden;}
+.list-div li
+{ 
+    font-size:12px !important;
+    margin: 0 auto !important;
+    text-indent:10px;
+    width:100% !important;
+    padding:8px 0;
+    border-bottom:1px solid #ccc;
+}
+.list-div ul{
+    transform: translate(0,0);
+    -moz-transform:translate(0,0); /* Firefox */
+    -webkit-transform:translate(0,0); /* Safari and Chrome */
+    -o-transform:translate(0,0); /* Opera */
+}     
+
+
+.factoryList{ height:240px; overflow:hidden;float:left;width:40%}
+.factoryList li
+{ 
+    font-size:12px !important;
+    margin: 0 auto !important;
+    text-indent:10px;
+    width:100% !important;
+    padding:8px 0;
+    border-bottom:1px solid #ccc;
+
+}
+.factoryList li span.ename{
+    float: right;
+    margin-right:10px;
+}
+.factoryList ul{
+    transform: translate(0,0);
+    -moz-transform:translate(0,0); /* Firefox */
+    -webkit-transform:translate(0,0); /* Safari and Chrome */
+    -o-transform:translate(0,0); /* Opera */
+}
+.factoryareaList{ 
+        height:240px;
+        overflow:hidden; 
+        float: left;
+        width:60%;
+       -webkit-box-shadow:0 0 3px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        -webkit-transition:all 0.3s ease;
+        -moz-transition:all 0.3s ease;
+        -ms-transition:all 0.3s ease;
+        -o-transition:all 0.3s ease;
+        transition:all 0.3s ease;
+    }
+
+.factoryareaList li
+{ 
+    font-size:12px !important;
+    margin: 0 auto !important;
+    width:100% !important;
+    padding:8px 0;
+    border-bottom:1px solid #ccc;
+ 
+}
+
+.factoryareaList li span{   margin-left:10px;}
+
+.factoryareaList ul{
+    transform: translate(0,0);
+    -moz-transform:translate(0,0); /* Firefox */
+    -webkit-transform:translate(0,0); /* Safari and Chrome */
+    -o-transform:translate(0,0); /* Opera */
+}
+.pad0{padding-top:0 !important}
+#interviewSelectPosition ul li .room input[type="text"]{
+	width: 220px;
+	height: 24px;
+	padding:6px 0;
+	text-indent: 10px;
+	border-radius:4px;
+}
+
+/*header*/
+
+.header{
+	height: 40px;
+	position:absolute;
+	width: 100%;
+	left: 0;
+	top:0;
+	z-index: 10;
+	background: url(/Content/Images/headerbg.png) repeat-x;
+	text-align:center;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+}
+.header.blue{
+
+	background-position: 0 -46px; 
+}
+
+.jingpin{
+	background: url(/Content/Images/headerbg.png) repeat-x;
+	background-position:0 -43px; 
+}
+.header .ico{
+	position:absolute;
+	top:0;
+	left: 0;
+	background: url(/Content/Images/headerbg.png) repeat-x;
+	background-position:0 -96px; 
+	height: 40px; 
+	width: 40px;
+	-moz-box-shadow:inset -0px -0px 2px #000000;
+	-webkit-box-shadow:inset -0px -0px 2px #000000;
+	box-shadow:inset -0px -0px 2px #000000;
+}
+.header .ico .wosiheader{
+	width: 40px;
+	height: 40px;
+	background: url(/Content/Images/visiticon.png) no-repeat;
+	background-position: 7px -118px;
+}
+.header .ico .jingpinheader{
+	width: 31px;
+	height: 35px;
+	background: url(/Content/Images/visiticon.png) no-repeat;
+	background-position: 7px -158px;
+}
+.header .ico .soviheader{
+	width: 31px;
+	height: 35px;
+	background: url(/Content/Images/visiticon.png) no-repeat;
+	background-position: 7px -200px;
+}
+.header .ico .sDisplayheader{
+	width: 31px;
+	height: 35px;
+	background: url(/Content/Images/visiticon.png) no-repeat;
+	background-position: 7px -248px;
+}
+.header .ico .coolerheader{
+	width: 31px;
+	height: 35px;
+	background: url(/Content/Images/visiticon.png) no-repeat;
+	background-position: 7px -290px;
+}
+.header .ico .otherheader{
+	width: 31px;
+	height: 35px;
+	background: url(/Content/Images/visiticon.png) no-repeat;
+	background-position: 7px -331px;
+}
+.table-l>tbody>tr>td{padding:0;padding: 5px 0px 5px 0px; }
+.table-l>tbody>tr>td:last-child{
+	text-align: right;
+	vertical-align: middle;
+}
+.table-l.tt>tbody>tr>td:last-child{
+	text-align: left;
+	vertical-align: middle;
+}
+.table-l>tbody>tr>td>span.en{
+	line-height:20px;
+	color: #B4B4B5;
+}
+.table-l>tbody>tr>td>span.en2{
+	line-height:15px;
+	color: #B4B4B5;
+}
+ .self{ width:130px; line-height:20px }  
+.table-l.tt>tbody>tr>td:last-child div{ font-size: 16px; line-height: 26px;float: left;position: relative;}
+.table-l>tbody>tr>td:last-child div{ font-size: 16px;line-height: 26px;float: right;}
+.table-l>tbody>tr>td:last-child div.money{height:20px;width: 20px;display: block;background-image: url('/Content/Images/date.png');background-repeat:no-repeat;-webkit-background-size: 20px 20px; }
+.table-l input{
+	height: 30px;
+	border-radius: 4px;
+	width: 100px;
+}
+input[type="number"][disabled="true"]{
+	background:#ddd;
+	height: 30px;
+	border-radius: 4px;
+	width: 100px;
+}
+.division{
+	height: 1px;
+	margin: 10px auto;
+	width: 100%;
+	border-bottom:1px dotted #fff;
+	width: 100%;
+}
+/*KOSOVI*/
+
+.kosovibody{
+
+	padding-top: 50px;
+	width: 90%;
+	margin: 0 auto;
+}
+.description{ 
+	margin-top: 10px;
+	padding:5px;
+	background: -webkit-gradient(linear,0% 0%, 0% 100%, from(#727171), to(#727171), color-stop(0.9,#6B6A6A));
+	-moz-box-shadow:inset -0px -0px 2px #000000;
+	-webkit-box-shadow:inset -0px -0px 2px #000000;
+	box-shadow:inset -0px -0px 2px #000000;
+}
+.description.none{
+		background: none;
+		-moz-box-shadow:inset -0px -0px 0px #000000;
+		-webkit-box-shadow:inset -0px -0px 0px #000000;
+		box-shadow:inset -0px -0px 0px #000000;
+}
+.description p{line-height: 16px; font-size: 12px;}
+
+/*sencond display*/
+
+.sdisplaybody{
+	padding-top: 50px;
+	width: 90%;
+	margin: 0 auto;
+}
+.showImg { 
+	display:-moz-box;
+    display:-webkit-box;
+    display:box;
+    width: 100%;
+    min-height: 100px;
+    margin-top: 10px;
+
+}
+.imgOne{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    box-flex:1;
+    min-height:100px;
+}
+.imgOne img{width: 100%;height:100%}
+.imgTwo{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    box-flex:1;
+    margin:0px 10px;/*//添加margin属性*/
+    min-height:100px;
+}
+.imgTwo img{width: 100%;height:100%}
+.imgThree{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    box-flex:1;
+    min-height:100px;
+}
+.imgThree img{width: 100%; height:100%;}
+
+/*radio样式*/
+.table-l>tbody>tr>td:last-child div.cssradio{
+	line-height:20px;
+}
+.cssradio{
+
+	width: 84px;
+	border-radius: 4px;
+	border: 1px solid #fff;
+}
+label {
+	width: 42px;
+	font-size:14px;
+	padding:3px 0;
+	color: #9E9F9F;
+	float: left;
+	text-align: center;
+	
+}
+label.checked {
+	background: -webkit-gradient(linear,0% 0%, 0% 100%, from(#DFDFDF), to(#FFFFFF), color-stop(0.2,#EDEDED),color-stop(0.9,#DBDBDB),color-stop(0.4,#EDEDED));
+	color: #fff;
+	font-size:14px;
+	color:#DF031B;
+	border-radius: 4px;
+}
+/*radio样式 end*/
+
+/*陈列搜索统一样式*/
+/**美化样式上传图片**/
+..accordion{margin-top: 10px;}
+.accordionControl{width:100%;}
+.accordion .table-l{display: none}
+.accordionControl .ico-name{  background: url(/Content/Images/visiticon.png) no-repeat;background-position: 5px -469px;}
+.ico-name.pinch{background-position: 5px -516px}
+
+.accordionControl .ico-name{ float: left;width:40px;height:33px; background: url(/Content/Images/visiticon.png) no-repeat;background-position: 5px -469px;}
+.accordionControl .titleA{float: left;}
+.ico-name.pinch{background-position: 5px -516px}
+
+.accordionControl .uploadImg
+{
+    float:left;
+		width:85%;/*120px;*/
+		height: 50px; 	
+		display:-moz-box;
+    	display:-webkit-box;
+    	display:none;
+    	opacity: 0;
+    	margin-top:10px
+ }
+
+.inputfile .filepretty{ width:50px ; height:50px; background:url(/Content/Images/file_btn.png) no-repeat; background-size:cover;}
+.inputfile .filepretty img { width:100%; height:100% }
+.inputfile input[type="file"]{position:absolute; top:0;left:0px; width:50px; height:50px; filter:alpha(opacity:0);opacity:0; 
+                               overflow:hidden;display:-moz-inline-box;display:inline-block;}
+.inputfile .reltive{ position:relative; display:inline-block; left:0px; float:left; margin-left:20px; width:50px; height:50px;}
+.reltive:first-child{margin-left:0 !important;}
+
+/**美化样式上传图片**/
+.discription{ margin: 10px auto;display: none}
+.phone-discription {
+padding: 5px 0;
+padding-top: 5px;
+padding-right: 0px;
+padding-bottom: 5px;
+padding-left: 0px;
+text-indent: 10px;
+border-radius: 3px;
+width:100%;
+height:30px
+}
+.phone-Select {
+padding: 5px 0;
+padding-top: 5px;
+padding-right: 0px;
+padding-bottom: 5px;
+padding-left: 0px;
+text-indent: 10px;
+border-radius: 3px;
+width:100%;
+height:30px
+}
+.box{
+	display:-moz-box;
+    display:-webkit-box;
+    display:box;
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+.box .imgcontent{
+	-moz-box-flex:1;
+    -webkit-box-flex:1;
+    box-flex:1;
+}
+.box .imgcontent img{width: 100%}
+.content{
+	-moz-box-flex:3;
+    -webkit-box-flex:3;
+    box-flex:3;
+    margin-left: 10px;
+}
+.content p{line-height: 15px;font-size: 11px;}
+
+.yzdbody{display: none}
+
+
+/*loading层加的样式*/
+  .loadingMessageBox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            opacity: 0.5;
+            z-index: 11;
+            text-align: center;
+        }
+
+ .loadingMessage {
+            width: auto;
+            min-width: 50px;
+            height: auto;
+            line-height: 50px;
+            text-align: center;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 40%;
+            position: absolute;
+            color: #ffffff;
+            font-size: 15px;
+            z-index: 111;
+            -webkit-animation: loadingmessage 2s infinite;
+        }
+
+@-webkit-keyframes loadingmessage {
+            0% {
+                -webkit-transform: scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                -webkit-transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                -webkit-transform: translateY(20px);
+                opacity: 0;
+            }
+        }
+
+
+/* ProductSetDate.aspx 货龄走访填写时间页样式*/
+   .productUl {
+            display: block;
+            font-size: 0px;
+        }
+            .productUl li {
+                width: 50%;
+                display: inline-block;
+                box-sizing: border-box;
+                padding: 5px;
+            }
+                .productUl li div.product {
+                    border-bottom: 1px dotted #ffffff;
+                    text-align: center;
+                    position: relative;
+                    padding: 30px 0px 40px 0px;
+                }
+                .productUl li div.product .productbtn{ width: 50px;height: 100px;background: none;position: absolute;z-index: 1;  left: 0;right: 0;margin: auto;}
+                .productUl li div.product img{ width: 100px;height: 100px;}
+                .productUl li div .TimeInput {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 111;
+                    display: none;
+                    background: #9E9F9F;
+                    opacity: 1;
+                }
+                    .productUl li div .TimeInput .productTitle {
+                        width:85%;
+                        height: 15px;
+                        display: block;
+                        padding: 5px 5px 0px 5px;
+                    }
+                        .productUl li div .TimeInput .productTitle span {
+                            width: auto;
+                            height: 15px;
+                            margin: 0px;
+                            padding: 0px;
+                            font-size: 10px;
+                            line-height: 15px;
+                        }
+                            .productUl li div .TimeInput .productTitle span.age {
+                                float: right;
+                                margin-right: 10px;
+                            }
+
+                        .productUl li div .TimeInput .productTitle i {
+                            width: 40px;
+                            height: 40px;
+                            position: absolute;
+                            border-radius: 5px;
+                            right: -5px;
+                            top: -8px;
+                            color: #fff;
+                            font-size: 12px;
+                            line-height: 12px;
+                            background-image: url('/Content/Images/footerTip.png');
+                            background-repeat: no-repeat;
+                            background-position: right -146px;
+                            background-size: 25px 170px;
+                        }
+
+                    .productUl li div .TimeInput input {
+                        height: 30px;
+                        border-radius: 4px;
+                        width: 55%;
+                        margin-left: 3%;
+                        margin-top: 10px;
+                        float: left;
+                    }
+                    .productUl li div .TimeInput span {
+                        width: 30%;
+                        height: 30px;
+                        line-height: 30px;
+                        margin-top: 10px;
+                        float: left;
+                        color: #ffffff;
+                        font-size: 12px;
+                    }
+                    .productUl li div .TimeInput button {
+                        width:40px;
+                        height:20px;
+                        background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#A20214), to(#E31B1B), color-stop(0.2,#DB0B12),color-stop(0.9,#BA0316),color-stop(0.4,#E01010));
+                        color:#ffffff;
+                        border:none;
+                        border-radius:5px;
+                        position:absolute;
+                        right:3px;
+                        bottom:3px;
+                    }
+                  .productUl li div .TimeInput button.disabled {
+                        background: -webkit-gradient(linear,0% 0%, 0% 100%, from(#DFDFDF), to(#FFFFFF), color-stop(0.2,#EDEDED),color-stop(0.9,#DBDBDB),color-stop(0.4,#EDEDED));
+                        color: #999999;
+                        }
+                .productUl li div .active {
+                    display: inline-block;
+                    -webkit-animation: bounceIn .5s 1;
+                }
+                .productUl li div .active1 {
+                    display: inline-block;
+                    -webkit-animation: slideInLeft .5s 1;
+                }
+                .productUl li div .active2 {
+                    display: inline-block;
+                    -webkit-animation: rollIn .5s 1;
+                }
+                .productUl li div .success {
+                    width: 36px;
+                    height: 30px;
+                    background: url(/Content/Images/visiticon.png) no-repeat;
+                    background-position: 5px -380px;
+                    position: absolute;
+                    z-index: 11;
+                    right: 0px;
+                    top: 0px;
+                }
+                .productUl li .title {
+                    position: absolute;
+                    height: 40px;
+                    line-height: 15px;
+                    width: 100%;
+                    color: #fff;
+                    display: inline-block;
+                    bottom: 0px;
+                    left: 0px;
+                    font-size: 12px;
+                    overflow: hidden;
+                }
+
+
+
+
+   

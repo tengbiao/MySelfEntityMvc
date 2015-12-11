@@ -1,0 +1,345 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>市场走访</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <style>
+        #kelebody {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="kelebody">
+        <div class="bodycontent scroller" id="interviewSelectPosition">
+            <div class="vPsition">
+                <div class="mark"></div>
+                <div class="title">
+                   走访
+                </div>
+                <div class="vpostion" id="locationA"></div>
+                <input type="hidden" name="Location" id="LocationInput" />
+            </div>
+
+            <ul>
+                <li>
+                    <div class="title">
+                        城市
+                    </div>
+                    <div class="room">
+                        <div class="input-select btn" id="cityDiv" data-value="">
+                            <span></span>
+                            <div class="sel_arrow"></div>
+                        </div>
+                        <input type="hidden" name="city" id="cityInput">
+                        <div class="listBox" id="CityListBox" style="height: 276px;">
+                            <div class="search">
+                                <input name="city" id="search" placeholder="关键字查询Key word">
+                            </div>
+                            <div class="list-div" id="cityList">
+                                <ul class="scroller">
+                                    <li data-value="7D833BA2-81E7-474C-A64A-1AD60173FC5A">
+                                        上海
+                                    </li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        网点
+                    </div>
+                    <div class="room">
+                        <div class="input-select btn" id="PartnerTypeDiv" data-value="001">
+                            <span>现有网点</span>
+                            <div class="sel_arrow"></div>
+                        </div>
+                        <div class="listBox" id="PartnerTypeBox" style="height: 59px; ">
+                            <div class="list-div" id="PartnerTypeList">
+                                <ul class="scroller">
+                                    <li data-value="001" onclick="HideLi('Partnerdrp', 'Partnertext')">现有网点</li>
+                                    <li data-value="002" onclick="HideLi('Partnertext', 'Partnerdrp')">新增网点</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li id="Partnerdrp">
+                    <div class="title">
+                        门店
+                    </div>
+                    <div class="room">
+                        <div class="input-select btn" id="PartnerDiv" data-value="">
+                            <span></span>
+                            <div class="sel_arrow"></div>
+                        </div>
+                        <div class="listBox" id="PartnerBox" style="height: 276px;">
+                            <div class="search">
+                                <input name="Partner" id="search" placeholder="关键字查询Key word">
+                            </div>
+                            <div class="list-div" id="Partner">
+                                <ul class="scroller">
+                                    <li data-value="7D833BA2-81E7-474C-A64A-1AD60173FC5A">
+                                        上海
+                                    </li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                    <li data-value="shanghai">shanghai</li>
+                                </ul>
+       
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="Partnertext" style="display:none">
+                    <div class="title">
+                     门店
+                    </div>
+                    <div class="room">
+                        <input type="text" value="" id="PartnerInput" />
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="title">
+                       地址
+                    </div>
+                    <div class="room">
+                        <input type="text" value="" id="AddressInput" />
+                    </div>
+                </li>
+            </ul>
+            <br />
+            <br />
+        </div>
+    </div>
+    <div class="fix40"></div>
+    <!-- footer -->
+    <div class="footerReport">
+        <div class="flex ">
+        </div>
+        <div class="arrow-down"></div>
+        <div class="tip">
+            <ul>
+                <li onclick="javascript:ToHenineKen()"><i></i>重新开始</li>
+            </ul>
+        </div>
+        <div class="footer-fl clearfix">
+            <div class="Lastone" onclick="ToHenineKen()"></div>
+            <div class="Nexttwo" onclick="OnSubmit('next')"></div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/iscroll.js"></script>
+    <script src="~/Scripts/jquery.touchSwipe.min.js"></script>
+    <script src="~/Scripts/HenineKen.js"></script>
+    <script type="text/javascript">
+        //提示信息
+        var location_error = "<%=Resources.Language.Location_error%>";
+        var location_fault = "<%=Resources.Language.Location_fault%>";
+        var location_loading = "<%=Resources.Language.Location_loading%>";
+        var pleaseInputCity = "<%=Resources.Language.PleaseInputCity%>";
+        var pleaseInputAddress = "<%=Resources.Language.PleaseInputAddress%>";
+        var pleaseInputChannel = "<%=Resources.Language.PleaseInputChannel%>";
+        var saveSuccess = "<%=Resources.Language.SaveSuccess%>";
+        var confirmSubmit = "<%=Resources.Language.ConfirmSubmit%>";
+        var saving = "<%=Resources.Language.Saving%>";
+        var neterror = "<%=Resources.Language.NetError %>";
+
+        var PartnerScorll
+
+        $(function () {
+            //城市选择后填充网点
+            $("#cityList>ul>li").on("click", function () {
+                var citycode = $(this).data("value");
+                $.post("/SystemUtilityApi/QueryPartnerByCityCode", { cityCode: citycode }, function (e) {
+                    if (e.success) {
+                        var liHtml = "";
+                        $.each(e.partners, function (i, v) {
+                            liHtml += "<li data-value=\"" + v.ID + "\"";
+                            liHtml += ">" + v.PartnerName + "</li>";
+                        });
+                        $("#Partner>ul").empty().append(liHtml);
+                        console.log(liHtml);
+                    } else {
+                        console.log(e.msg);
+                    }
+                });
+            })
+
+        });
+        //网点 下拉与文本 显示影藏
+        function HideLi(obj1,obj2)
+        {
+            //obj1 显示
+            $("#" + obj1).css("display", "block");
+            //obj2 隐藏
+            $("#" + obj2).css("display", "none");
+        }
+
+  
+
+        //保存
+        function OnSubmit(typeto) {
+            var locations = $("#LocationInput").val();
+            var city = $("#cityInput").val();
+            var storeName = $("#StoreNameInput").val();
+            var address = $("#AddressInput").val();
+            var channel = $("#channelInput").val();
+            var cagegory = $.trim($("#channelbtn>span").text());
+
+            if (city.length <= 0) {
+                //alert("请选择城市<br/>Please select city");
+                alert(pleaseInputCity);
+                return false;
+            }
+            if (address.length <= 0) {
+                //alert("请输入地址<br>Please input address");
+                alert(pleaseInputAddress);
+                return false;
+            }
+            if (channel.length <= 0) {
+                //alert("请选择渠道<br>Please select channel");
+                alert(pleaseInputChannel);
+                return false;
+            }
+            loading.show(saving);
+
+            $.ajax({
+                url: "StoreAddress.aspx",
+                type: "post",
+                dataType: "json",
+                timeout: 10000,
+                data: {
+                    action: 'SaveAddress',
+                    storeName: storeName,
+                    address: address,
+                    locations: locations,
+                    city: city,
+                    channel: channel
+                },
+                success: function (e) {
+                    loading.hide();
+                    if (e.success) {
+                        if (typeto == "save")
+                            alert(saveSuccess);
+                        else
+                            location.href = "ProductSetDate.aspx?category=" + encodeURIComponent(cagegory);
+                    } else {
+                        alert(e.msg);
+                    }
+                },
+                error: function (e) {
+                    alert(neterror, ok, function () { ToKOnnector(); });
+                    loading.hide();
+                }
+            });
+        }
+
+        //提交
+        function ToSubmit() {
+            $.post("ProductSetDate.aspx", { action: "CheckedInput" }, function (e) {
+                if (e.success) {
+                    confirm(confirmSubmit, function () {
+                        //确认提交，跳转到success页面
+                        location.href = "Success.aspx";
+                    }, function () { console.log("取消提交"); });
+                } else {
+                    alert(e.msg);
+                }
+            }, "json");
+        }
+
+
+        //定位
+        function getLocation() {
+            $("#locationA").html(location_loading + "<span class=\"locationLoading\">lll</span>");
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(locationSuccess, locationError, {
+                    // 指示浏览器获取高精度的位置，默认为false
+                    enableHighAcuracy: true,
+                    // 指定获取地理位置的超时时间，默认不限时，单位为毫秒
+                    timeout: 10000,
+                    // 最长有效期，在重复获取地理位置时，此参数指定多久再次获取位置。
+                    maximumAge: 3000
+                });
+            } else {
+                alert("您的浏览器不支持Your browser does not support Geolocation!");
+            }
+        }
+
+
+        function locationError(error) {
+            alert(location_fault);
+            $("#locationA").html(location_error);
+        }
+
+        function locationSuccess(position) {
+            var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+            var url = 'http://api.map.baidu.com/geocoder/v2/?ak=7GXy1Sa8PaW5z1FmigkdFGjl&location=' + lat + ',' + lng + '&output=json&pois=0&coordtype=wgs84ll';
+            $.ajax({
+                url: url,
+                type: 'GET',
+                dataType: 'JSONP', //here
+                success: function (req) {
+                    if (req["status"] == '0') {
+                        var city = req["result"]["addressComponent"]["city"];
+                        var district = req["result"]["addressComponent"]["district"];
+                        var address = req["result"]["formatted_address"];
+                        $("#locationA").html(city + district);
+                        $("#LocationInput").val(city + district);
+                        $("#cityInput").val(city);
+                        $("#cityDiv>span").text(city);
+                        $("#AddressInput").val(address);
+
+                    } else {
+                        $("#locationA").html(location_error);
+                    }
+                }
+            });
+        }
+
+    </script>
+
+</body>
+</html>
+
+

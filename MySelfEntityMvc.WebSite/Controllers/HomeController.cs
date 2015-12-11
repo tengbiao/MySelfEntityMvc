@@ -11,7 +11,7 @@ namespace MySelfEntityMvc.WebSite.Controllers
 {
     public class HomeController : Controller
     {
-        private static ILog logger = LogManager.GetLogger(typeof(HomeController));  
+        private static ILog logger = LogManager.GetLogger(typeof(HomeController));
         //
         // GET: /Home/
 
